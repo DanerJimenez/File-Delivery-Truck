@@ -1,0 +1,19 @@
+High Priority
+	- Fix the message containing trash values
+		- this is due to the static char array being unallocated after going out of scope
+		
+
+Med Priority
+	- Code text file reader that will read a config file containing all tasks to be done
+		- task format
+			srcdir|pattern|destdir
+	- Tweak windows version of truck.c to check for duplicates
+		- rename if dupe is found
+			
+Low Priority
+	- Create code for the vanilla truck.c
+		- This will make use of c functions to transfer files
+		- File read, file write by bytes?
+		- Also, check for duplicates
+			- rename if found
+		

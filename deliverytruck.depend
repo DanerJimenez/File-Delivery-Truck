@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1496592506 source:d:\progfiles\c\deliverytrucks\deliverytruck\main.c
+	<stdio.h>
+	<stdlib.h>
+	"src/headers.h"
+
+1496589126 d:\progfiles\c\deliverytrucks\deliverytruck\src\headers.h
+	"typedef.h"
+	"truck.h"
+	"logger.h"
+
+1496588984 d:\progfiles\c\deliverytrucks\deliverytruck\src\truck.h
+
+1496591272 d:\progfiles\c\deliverytrucks\deliverytruck\src\typedef.h
+	<stdbool.h>
+
+1496583658 d:\progfiles\c\deliverytrucks\deliverytruck\src\windows\truck.c
+	<stddef.h>
+	"../typedef.h"
+
+1496565147 d:\progfiles\c\deliverytrucks\deliverytruck\src\vanilla\truck.c
+
+1496583586 d:\progfiles\c\deliverytrucks\deliverytruck\src\logger.h
+
+1496580451 d:\progfiles\c\deliverytrucks\deliverytruck\src\vanilla\logger.c
+
+1496580451 source:d:\progfiles\c\deliverytrucks\deliverytruck\src\vanilla\logger.c
+
+1496565147 source:d:\progfiles\c\deliverytrucks\deliverytruck\src\vanilla\truck.c
+
+1496593092 source:d:\progfiles\c\deliverytrucks\deliverytruck\src\windows\truck.c
+	<stdio.h>
+	<stddef.h>
+	<stdlib.h>
+	<dirent.h>
+	"../typedef.h"
+
