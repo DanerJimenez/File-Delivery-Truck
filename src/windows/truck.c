@@ -104,7 +104,7 @@ bool direxists(const char* dir_s) {
 
 void invalidindex(result_t* result, int index) {
     char* format = "Invalid character found at index %d.";
-    char message[50];
+    char* message = (char *)malloc( strlen(format) );
     sprintf(message, format, index);
     result -> message = message;
     result -> succeeded = false;
@@ -112,7 +112,9 @@ void invalidindex(result_t* result, int index) {
 
 void invaliddir(result_t* result, const char* dir) {
     char* format = "Invalid directory: %s";
-    char message[100];
+
+    size_t message_length = strlen(dir) + strlen(format);
+    char* message = (char *)malloc( message_length );
     sprintf(message, format, dir);
     result -> message = message;
     result -> succeeded = false;
@@ -126,7 +128,9 @@ void sprintfail(result_t* result) {
 
 void syscallfail(result_t* result, const char* cmd) {
     char* format = "Unable to execute command: %s";
-    char message[150];
+
+    size_t message_length = strlen(cmd) + strlen(format);
+    char* message = (char *)malloc( message_length );
     sprintf(message, format, cmd);
     result -> message = message;
     result -> succeeded = false;
@@ -134,7 +138,9 @@ void syscallfail(result_t* result, const char* cmd) {
 
 void exectasksucceed(result_t* result, const char* cmd) {
     char* format = "Task executed! Command: %s";
-    char message[150];
+
+    size_t message_length = strlen(cmd) + strlen(format);
+    char* message = (char *)malloc( message_length );
     sprintf(message, format, cmd);
     result -> message = message;
     result -> succeeded = true;
