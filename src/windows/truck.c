@@ -55,7 +55,7 @@ void executetask(const task_t* task, result_t* result) {
     char* srcdir = task -> srcdir;
     char* destdir = task -> destdir;
 
-    char* cmdformat = "move %s\\%s %s";
+    char* cmdformat = "move \"%s\\%s\" \"%s\"";
     char command[200];
 
     int sprint_status = sprintf(command, cmdformat, srcdir, pattern, destdir);
