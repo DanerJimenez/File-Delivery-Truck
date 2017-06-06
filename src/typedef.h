@@ -11,6 +11,11 @@ typedef struct {
 
 typedef struct {
     task_t* task;
+    struct task_list* next;
+} task_list;
+
+typedef struct {
+    task_t* task;
     char* message;
     bool succeeded;
 } result_t;

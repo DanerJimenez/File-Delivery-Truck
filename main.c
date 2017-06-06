@@ -5,18 +5,16 @@
 
 int main()
 {
-    size_t taskSize = sizeof(task_t);
-    task_t* task = (task_t *)malloc(taskSize);
+    char* taskfilepath = "D:\\zz_exp\\testinggrounds\\tasks.txt";
+    task_list* list = gettasks(taskfilepath);
 
-    task -> pattern = "*.txt";
-    task -> srcdir = "D:\\zz_exp\\testinggrounds\\src";
-    task -> destdir = "D:\\zz_exp\\testinggrounds\\dest";
-
-    result_t* result = deliver(task);
-    char* message = result -> message;
-    printf(message);
-
-    free(task);
+    task_list* traveller = list;
+    while ( traveller != NULL ) {
+        task_t* task = traveller -> task;
+        result_t* result = deliver(task);
+        printf("MESSAGE: %s\n", result -> message);
+        traveller = traveller -> next;
+    }
 
     return 0;
 }
